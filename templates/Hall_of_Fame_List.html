@@ -1,0 +1,4217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hall of Fame Projections</title>
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3a3f44">
+    <a class="navbar-brand" style="color: #7a8288" href="index.html">Visualization</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+      <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" style="color: #7a8288" id="navbarDropdownMenuLink" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Player List
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"></div>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" style="color: #7a8288" href="/player_data.html">Player Database</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" style="color: #7a8288" href="Hall_of_Fame_List.html">Current Hall of
+            Famers</a>
+        </li>
+
+      </ul>
+
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-8">
+
+        <h1 style="color:#fd7e14;" style="font-size: 14pt;">Here is a list of all current Hall of Famers</h1>
+        <a style="color: #62c462" href="Resources/Hall_of_Fame_List.csv"> download file here (CSV)</a>
+
+        <table class="table table-bordered table-hover table-condensed">
+            <thead><tr><th title="Field #1">Year</th>
+            <th title="Field #2">Name</th>
+            <th title="Field #3">Primary position</th>
+            <th title="Field #4">Primary team</th>
+            <th title="Field #5">Career</th>
+            <th title="Field #6">Induction method</th>
+            <th title="Field #7">Vote %</th>
+            </tr></thead>
+            <tbody><tr>
+            <td align="right">1936</td>
+            <td>Ty Cobb</td>
+            <td>CF</td>
+            <td>Detroit Tigers</td>
+            <td>1905–1928</td>
+            <td>BBWAA</td>
+            <td>98.23%</td>
+            </tr>
+            <tr>
+            <td align="right">1936</td>
+            <td>Walter Johnson</td>
+            <td>P</td>
+            <td>Washington Senators</td>
+            <td>1907–1927</td>
+            <td>BBWAA</td>
+            <td>83.63%</td>
+            </tr>
+            <tr>
+            <td align="right">1936</td>
+            <td>Christy Mathewson</td>
+            <td>P</td>
+            <td>New York Giants</td>
+            <td>1900–1916</td>
+            <td>BBWAA</td>
+            <td>90.71%</td>
+            </tr>
+            <tr>
+            <td align="right">1936</td>
+            <td>Babe Ruth</td>
+            <td>RF</td>
+            <td>New York Yankees</td>
+            <td>1914–1935</td>
+            <td>BBWAA</td>
+            <td>95.13%</td>
+            </tr>
+            <tr>
+            <td align="right">1936</td>
+            <td>Honus Wagner</td>
+            <td>SS</td>
+            <td>Pittsburgh Pirates</td>
+            <td>1897–1917</td>
+            <td>BBWAA</td>
+            <td>95.13%</td>
+            </tr>
+            <tr>
+            <td align="right">1937</td>
+            <td>Morgan Bulkeley</td>
+            <td>EXEC</td>
+            <td>—</td>
+            <td>1874–1876</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1937</td>
+            <td>Ban Johnson</td>
+            <td>EXEC</td>
+            <td>—</td>
+            <td>1900–1927</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1937</td>
+            <td>Nap Lajoie</td>
+            <td>2B</td>
+            <td>Cleveland Indians</td>
+            <td>1896–1916</td>
+            <td>BBWAA</td>
+            <td>83.58%</td>
+            </tr>
+            <tr>
+            <td align="right">1937</td>
+            <td>Connie Mack</td>
+            <td>MGR</td>
+            <td>Philadelphia Athletics</td>
+            <td>1894–1950</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1937</td>
+            <td>John McGraw</td>
+            <td>MGR</td>
+            <td>New York Giants</td>
+            <td>1899</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1901–1932</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1937</td>
+            <td>Tris Speaker</td>
+            <td>CF</td>
+            <td>Cleveland Indians</td>
+            <td>1907–1928</td>
+            <td>BBWAA</td>
+            <td>82.09%</td>
+            </tr>
+            <tr>
+            <td align="right">1937</td>
+            <td>George Wright</td>
+            <td>EXEC/PIO</td>
+            <td>Boston Red Stockings</td>
+            <td>1867–1882</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1937</td>
+            <td>Cy Young</td>
+            <td>P</td>
+            <td>Cleveland Spiders[c 1]</td>
+            <td>1890–1911</td>
+            <td>BBWAA</td>
+            <td>76.12%</td>
+            </tr>
+            <tr>
+            <td align="right">1938</td>
+            <td>Grover Cleveland Alexander</td>
+            <td>P</td>
+            <td>Philadelphia Phillies</td>
+            <td>1911–1930</td>
+            <td>BBWAA</td>
+            <td>80.92%</td>
+            </tr>
+            <tr>
+            <td align="right">1938</td>
+            <td>Alexander Cartwright</td>
+            <td>PIO</td>
+            <td>Knickerbocker Base Ball Club</td>
+            <td>—</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1938</td>
+            <td>Henry Chadwick</td>
+            <td>PIO</td>
+            <td>—</td>
+            <td>—</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1939</td>
+            <td>Cap Anson</td>
+            <td>1B</td>
+            <td>Chicago White Stockings</td>
+            <td>1871–1897</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1939</td>
+            <td>Eddie Collins</td>
+            <td>2B</td>
+            <td>Chicago White Sox</td>
+            <td>1906–1930</td>
+            <td>BBWAA</td>
+            <td>77.74%</td>
+            </tr>
+            <tr>
+            <td align="right">1939</td>
+            <td>Charles Comiskey</td>
+            <td>EXEC/PIO</td>
+            <td>Chicago White Sox</td>
+            <td>1900–1931</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1939</td>
+            <td>Candy Cummings</td>
+            <td>EXEC/PIO</td>
+            <td>Hartford Dark Blues</td>
+            <td>1872–1877</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1939</td>
+            <td>Buck Ewing</td>
+            <td>C</td>
+            <td>New York Giants</td>
+            <td>1880–1897</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1939</td>
+            <td>Lou Gehrig</td>
+            <td>1B</td>
+            <td>New York Yankees</td>
+            <td>1923–1939</td>
+            <td>BBWAA</td>
+            <td>—4</td>
+            </tr>
+            <tr>
+            <td align="right">1939</td>
+            <td>Willie Keeler</td>
+            <td>RF</td>
+            <td>New York Highlanders[c 2]</td>
+            <td>1892–1910</td>
+            <td>BBWAA</td>
+            <td>75.55%</td>
+            </tr>
+            <tr>
+            <td align="right">1939</td>
+            <td>Charles Radbourn</td>
+            <td>P</td>
+            <td>Providence Grays</td>
+            <td>1881–1891</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1939</td>
+            <td>George Sisler</td>
+            <td>1B</td>
+            <td>St. Louis Browns</td>
+            <td>1915–1922</td>
+            <td>BBWAA</td>
+            <td>85.77%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1924–1930</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1939</td>
+            <td>Al Spalding</td>
+            <td>EXEC/PIO</td>
+            <td>Chicago White Stockings</td>
+            <td>1871–1878</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">19425</td>
+            <td>Rogers Hornsby</td>
+            <td>2B</td>
+            <td>St. Louis Cardinals</td>
+            <td>1915–1937</td>
+            <td>BBWAA</td>
+            <td>78.11%</td>
+            </tr>
+            <tr>
+            <td align="right">19445</td>
+            <td>Kenesaw Landis</td>
+            <td>EXEC</td>
+            <td>—</td>
+            <td>1920–1944</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1945</td>
+            <td>Roger Bresnahan</td>
+            <td>C</td>
+            <td>New York Giants</td>
+            <td>1897</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1900–1915</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1945</td>
+            <td>Dan Brouthers</td>
+            <td>1B</td>
+            <td>Buffalo Bisons</td>
+            <td>1879–1896</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1904</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1945</td>
+            <td>Fred Clarke</td>
+            <td>LF</td>
+            <td>Pittsburgh Pirates</td>
+            <td>1894–1915</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1945</td>
+            <td>Jimmy Collins</td>
+            <td>3B</td>
+            <td>Boston Red Sox</td>
+            <td>1895–1908</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1945</td>
+            <td>Ed Delahanty</td>
+            <td>LF</td>
+            <td>Philadelphia Phillies</td>
+            <td>1888–1903</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1945</td>
+            <td>Hugh Duffy</td>
+            <td>CF</td>
+            <td>Boston Beaneaters</td>
+            <td>1888–1906</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1945</td>
+            <td>Hugh Jennings</td>
+            <td>SS</td>
+            <td>Baltimore Orioles (NL)[c 3]</td>
+            <td>1891–1918</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1945</td>
+            <td>King Kelly</td>
+            <td>RF</td>
+            <td>Chicago White Stockings</td>
+            <td>1878–1893</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1945</td>
+            <td>Jim O&#39;Rourke</td>
+            <td>LF</td>
+            <td>New York Giants</td>
+            <td>1872–1893</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1904</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1945</td>
+            <td>Wilbert Robinson</td>
+            <td>MGR</td>
+            <td>Brooklyn Dodgers</td>
+            <td>1902</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1914–1931</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1946</td>
+            <td>Jesse Burkett</td>
+            <td>LF</td>
+            <td>Cleveland Spiders</td>
+            <td>1890–1905</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1946</td>
+            <td>Frank Chance</td>
+            <td>1B</td>
+            <td>Chicago Cubs</td>
+            <td>1898–1914</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1946</td>
+            <td>Jack Chesbro</td>
+            <td>P</td>
+            <td>New York Highlanders</td>
+            <td>1899–1909</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1946</td>
+            <td>Johnny Evers</td>
+            <td>2B</td>
+            <td>Chicago Cubs</td>
+            <td>1902–1917</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1922</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1929</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1946</td>
+            <td>Clark Griffith</td>
+            <td>EXEC/PIO</td>
+            <td>Washington Senators</td>
+            <td>1891–1914</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1946</td>
+            <td>Tommy McCarthy</td>
+            <td>RF</td>
+            <td>Boston Beaneaters</td>
+            <td>1884–1896</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1946</td>
+            <td>Joe McGinnity</td>
+            <td>P</td>
+            <td>New York Giants</td>
+            <td>1899–1908</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1946</td>
+            <td>Eddie Plank</td>
+            <td>P</td>
+            <td>Philadelphia Athletics</td>
+            <td>1901–1917</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1946</td>
+            <td>Joe Tinker</td>
+            <td>SS</td>
+            <td>Chicago Cubs</td>
+            <td>1902–1916</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1946</td>
+            <td>Rube Waddell</td>
+            <td>P</td>
+            <td>Philadelphia Athletics</td>
+            <td>1897</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1899–1910</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1946</td>
+            <td>Ed Walsh</td>
+            <td>P</td>
+            <td>Chicago White Sox</td>
+            <td>1904–1917</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1947</td>
+            <td>Mickey Cochrane</td>
+            <td>C</td>
+            <td>Philadelphia Athletics[c 4]</td>
+            <td>1925–1937</td>
+            <td>BBWAA</td>
+            <td>79.50%</td>
+            </tr>
+            <tr>
+            <td align="right">1947</td>
+            <td>Frankie Frisch</td>
+            <td>2B</td>
+            <td>St. Louis Cardinals</td>
+            <td>1919–1937</td>
+            <td>BBWAA</td>
+            <td>84.47%</td>
+            </tr>
+            <tr>
+            <td align="right">1947</td>
+            <td>Lefty Grove</td>
+            <td>P</td>
+            <td>Philadelphia Athletics[c 5]</td>
+            <td>1925–1941</td>
+            <td>BBWAA</td>
+            <td>76.40%</td>
+            </tr>
+            <tr>
+            <td align="right">1947</td>
+            <td>Carl Hubbell</td>
+            <td>P</td>
+            <td>New York Giants</td>
+            <td>1928–1943</td>
+            <td>BBWAA</td>
+            <td>86.96%</td>
+            </tr>
+            <tr>
+            <td align="right">1948</td>
+            <td>Herb Pennock</td>
+            <td>P</td>
+            <td>New York Yankees[c 6]</td>
+            <td>1912–1934</td>
+            <td>BBWAA</td>
+            <td>77.69%</td>
+            </tr>
+            <tr>
+            <td align="right">1948</td>
+            <td>Pie Traynor</td>
+            <td>3B</td>
+            <td>Pittsburgh Pirates</td>
+            <td>1920–1935</td>
+            <td>BBWAA</td>
+            <td>76.86%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1937</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1949</td>
+            <td>Mordecai Brown</td>
+            <td>P</td>
+            <td>Chicago Cubs</td>
+            <td>1903–1916</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1949</td>
+            <td>Charlie Gehringer</td>
+            <td>2B</td>
+            <td>Detroit Tigers</td>
+            <td>1924–1942</td>
+            <td>BBWAA</td>
+            <td>85.03%</td>
+            </tr>
+            <tr>
+            <td align="right">1949</td>
+            <td>Kid Nichols</td>
+            <td>P</td>
+            <td>Boston Beaneaters[c 7]</td>
+            <td>1890–1901</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1904–1906</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1951</td>
+            <td>Jimmie Foxx</td>
+            <td>1B</td>
+            <td>Philadelphia Athletics[c 8]</td>
+            <td>1925–1942</td>
+            <td>BBWAA</td>
+            <td>79.20%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1944–1945</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1951</td>
+            <td>Mel Ott</td>
+            <td>RF</td>
+            <td>New York Giants</td>
+            <td>1926–1947</td>
+            <td>BBWAA</td>
+            <td>87.17%</td>
+            </tr>
+            <tr>
+            <td align="right">1952</td>
+            <td>Harry Heilmann</td>
+            <td>RF</td>
+            <td>Detroit Tigers</td>
+            <td>1914</td>
+            <td>BBWAA</td>
+            <td>86.75%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1916–1931</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1952</td>
+            <td>Paul Waner</td>
+            <td>RF</td>
+            <td>Pittsburgh Pirates</td>
+            <td>1926–1945</td>
+            <td>BBWAA</td>
+            <td>83.33%</td>
+            </tr>
+            <tr>
+            <td align="right">1953</td>
+            <td>Ed Barrow</td>
+            <td>EXEC</td>
+            <td>New York Yankees</td>
+            <td>1921–1945</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1953</td>
+            <td>Chief Bender</td>
+            <td>P</td>
+            <td>Philadelphia Athletics</td>
+            <td>1903–1917</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1925</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1953</td>
+            <td>Tom Connolly</td>
+            <td>UMP</td>
+            <td>—</td>
+            <td>1898–1931</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1953</td>
+            <td>Dizzy Dean</td>
+            <td>P</td>
+            <td>St. Louis Cardinals</td>
+            <td>1930</td>
+            <td>BBWAA</td>
+            <td>79.17%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1932–1941</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1947</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1953</td>
+            <td>Bill Klem</td>
+            <td>UMP</td>
+            <td>—</td>
+            <td>1905–1941</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1953</td>
+            <td>Al Simmons</td>
+            <td>LF</td>
+            <td>Philadelphia Athletics</td>
+            <td>1924–1941</td>
+            <td>BBWAA</td>
+            <td>75.38%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1943–1944</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1953</td>
+            <td>Bobby Wallace</td>
+            <td>SS</td>
+            <td>St. Louis Browns</td>
+            <td>1894–1918</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1953</td>
+            <td>Harry Wright</td>
+            <td>EXEC</td>
+            <td>Philadelphia Phillies</td>
+            <td>1871–1893</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1954</td>
+            <td>Bill Dickey</td>
+            <td>C</td>
+            <td>New York Yankees</td>
+            <td>1928–1943</td>
+            <td>BBWAA</td>
+            <td>80.16%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1946</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1954</td>
+            <td>Rabbit Maranville</td>
+            <td>SS</td>
+            <td>Boston Braves</td>
+            <td>1912–1933</td>
+            <td>BBWAA</td>
+            <td>82.94%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1935</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1954</td>
+            <td>Bill Terry</td>
+            <td>1B</td>
+            <td>New York Giants</td>
+            <td>1923–1936</td>
+            <td>BBWAA</td>
+            <td>77.38%</td>
+            </tr>
+            <tr>
+            <td align="right">1955</td>
+            <td>Frank Baker</td>
+            <td>3B</td>
+            <td>Philadelphia Athletics</td>
+            <td>1908–1914</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1916–1919</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1921–1922</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1955</td>
+            <td>Joe DiMaggio</td>
+            <td>CF</td>
+            <td>New York Yankees</td>
+            <td>1936–1942</td>
+            <td>BBWAA</td>
+            <td>88.84%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1946–1951</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1955</td>
+            <td>Gabby Hartnett</td>
+            <td>C</td>
+            <td>Chicago Cubs</td>
+            <td>1922–1941</td>
+            <td>BBWAA</td>
+            <td>77.69%</td>
+            </tr>
+            <tr>
+            <td align="right">1955</td>
+            <td>Ted Lyons</td>
+            <td>P</td>
+            <td>Chicago White Sox</td>
+            <td>1923–1942</td>
+            <td>BBWAA</td>
+            <td>86.45%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1946</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1955</td>
+            <td>Ray Schalk</td>
+            <td>C</td>
+            <td>Chicago White Sox</td>
+            <td>1912–1929</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1955</td>
+            <td>Dazzy Vance</td>
+            <td>P</td>
+            <td>Brooklyn Dodgers</td>
+            <td>1915</td>
+            <td>BBWAA</td>
+            <td>81.67%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1918</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1922–1935</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1956</td>
+            <td>Joe Cronin</td>
+            <td>SS</td>
+            <td>Boston Red Sox</td>
+            <td>1926–1945</td>
+            <td>BBWAA</td>
+            <td>78.76%</td>
+            </tr>
+            <tr>
+            <td align="right">1956</td>
+            <td>Hank Greenberg</td>
+            <td>1B</td>
+            <td>Detroit Tigers</td>
+            <td>1930</td>
+            <td>BBWAA</td>
+            <td>84.97%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1933–1941</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1945–1947</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1957</td>
+            <td>Sam Crawford</td>
+            <td>RF</td>
+            <td>Detroit Tigers</td>
+            <td>1899–1917</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1957</td>
+            <td>Joe McCarthy</td>
+            <td>MGR</td>
+            <td>New York Yankees</td>
+            <td>1926–1946</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1948–1950</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1959</td>
+            <td>Zack Wheat</td>
+            <td>LF</td>
+            <td>Brooklyn Dodgers</td>
+            <td>1909–1927</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1961</td>
+            <td>Max Carey</td>
+            <td>CF</td>
+            <td>Pittsburgh Pirates</td>
+            <td>1910–1929</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1961</td>
+            <td>Billy Hamilton</td>
+            <td>CF</td>
+            <td>Philadelphia Phillies[c 9]</td>
+            <td>1888–1901</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1962</td>
+            <td>Bob Feller</td>
+            <td>P</td>
+            <td>Cleveland Indians</td>
+            <td>1936–1941</td>
+            <td>BBWAA</td>
+            <td>93.75%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1945–1956</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1962</td>
+            <td>Bill McKechnie</td>
+            <td>MGR</td>
+            <td>Cincinnati Reds</td>
+            <td>1915</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1922–1926</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1928–1946</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1962</td>
+            <td>Jackie Robinson</td>
+            <td>2B</td>
+            <td>Brooklyn Dodgers</td>
+            <td>1947–1956</td>
+            <td>BBWAA</td>
+            <td>77.50%</td>
+            </tr>
+            <tr>
+            <td align="right">1962</td>
+            <td>Edd Roush</td>
+            <td>CF</td>
+            <td>Cincinnati Reds</td>
+            <td>1913–1929</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1931</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1963</td>
+            <td>John Clarkson</td>
+            <td>P</td>
+            <td>Boston Beaneaters</td>
+            <td>1882</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1884–1894</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1963</td>
+            <td>Elmer Flick</td>
+            <td>RF</td>
+            <td>Cleveland Indians</td>
+            <td>1898–1910</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1963</td>
+            <td>Sam Rice</td>
+            <td>RF</td>
+            <td>Washington Senators</td>
+            <td>1915–1934</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1963</td>
+            <td>Eppa Rixey</td>
+            <td>P</td>
+            <td>Cincinnati Reds</td>
+            <td>1912–1917</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1919–1933</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1964</td>
+            <td>Luke Appling</td>
+            <td>SS</td>
+            <td>Chicago White Sox</td>
+            <td>1930–1943</td>
+            <td>BBWAA</td>
+            <td>94.03%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1945–1950</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1964</td>
+            <td>Red Faber</td>
+            <td>P</td>
+            <td>Chicago White Sox</td>
+            <td>1914–1933</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1964</td>
+            <td>Burleigh Grimes</td>
+            <td>P</td>
+            <td>Brooklyn Dodgers</td>
+            <td>1916–1934</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1964</td>
+            <td>Miller Huggins</td>
+            <td>MGR</td>
+            <td>New York Yankees</td>
+            <td>1913–1929</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1964</td>
+            <td>Tim Keefe</td>
+            <td>P</td>
+            <td>New York Giants</td>
+            <td>1880–1893</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1964</td>
+            <td>Heinie Manush</td>
+            <td>LF</td>
+            <td>Washington Senators[c 10]</td>
+            <td>1923–1939</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1964</td>
+            <td>John Montgomery Ward</td>
+            <td>SS</td>
+            <td>New York Giants</td>
+            <td>1878–1894</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1965</td>
+            <td>Pud Galvin</td>
+            <td>P</td>
+            <td>Buffalo Bisons</td>
+            <td>1875</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1879–1892</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1966</td>
+            <td>Casey Stengel</td>
+            <td>MGR</td>
+            <td>New York Yankees</td>
+            <td>1934–1936</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1938–1943</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1946–1960</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1962–1965</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1966</td>
+            <td>Ted Williams</td>
+            <td>LF</td>
+            <td>Boston Red Sox</td>
+            <td>1939–1942</td>
+            <td>BBWAA</td>
+            <td>93.38%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1946–1960</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1967</td>
+            <td>Branch Rickey</td>
+            <td>EXEC</td>
+            <td>—</td>
+            <td>1925–1955</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1967</td>
+            <td>Red Ruffing</td>
+            <td>P</td>
+            <td>New York Yankees</td>
+            <td>1924–1942</td>
+            <td>BBWAA</td>
+            <td>86.93%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1945–1947</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1967</td>
+            <td>Lloyd Waner</td>
+            <td>CF</td>
+            <td>Pittsburgh Pirates</td>
+            <td>1927–1942</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1944–1945</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1968</td>
+            <td>Kiki Cuyler</td>
+            <td>RF</td>
+            <td>Chicago Cubs</td>
+            <td>1921–1938</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1968</td>
+            <td>Goose Goslin</td>
+            <td>LF</td>
+            <td>Washington Senators</td>
+            <td>1921–1938</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1968</td>
+            <td>Joe Medwick</td>
+            <td>LF</td>
+            <td>St. Louis Cardinals</td>
+            <td>1932–1948</td>
+            <td>BBWAA</td>
+            <td>84.81%</td>
+            </tr>
+            <tr>
+            <td align="right">1969</td>
+            <td>Roy Campanella</td>
+            <td>C</td>
+            <td>Brooklyn Dodgers</td>
+            <td>1948–1957</td>
+            <td>BBWAA</td>
+            <td>79.41%</td>
+            </tr>
+            <tr>
+            <td align="right">1969</td>
+            <td>Stan Coveleski</td>
+            <td>P</td>
+            <td>Cleveland Indians</td>
+            <td>1912</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1916–1928</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1969</td>
+            <td>Waite Hoyt</td>
+            <td>P</td>
+            <td>New York Yankees</td>
+            <td>1918–1938</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1969</td>
+            <td>Stan Musial</td>
+            <td>LF</td>
+            <td>St. Louis Cardinals</td>
+            <td>1941–1944</td>
+            <td>BBWAA</td>
+            <td>93.24%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1946–1963</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1970</td>
+            <td>Lou Boudreau</td>
+            <td>SS</td>
+            <td>Cleveland Indians</td>
+            <td>1938–1952</td>
+            <td>BBWAA</td>
+            <td>77.33%</td>
+            </tr>
+            <tr>
+            <td align="right">1970</td>
+            <td>Earle Combs</td>
+            <td>CF</td>
+            <td>New York Yankees</td>
+            <td>1924–1935</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1970</td>
+            <td>Ford Frick</td>
+            <td>EXEC</td>
+            <td>—</td>
+            <td>1934–1951</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1951–19653</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1970</td>
+            <td>Jesse Haines</td>
+            <td>P</td>
+            <td>St. Louis Cardinals</td>
+            <td>1918</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1920–1937</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1971</td>
+            <td>Dave Bancroft</td>
+            <td>SS</td>
+            <td>Philadelphia Phillies</td>
+            <td>1915–1930</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1971</td>
+            <td>Jake Beckley</td>
+            <td>1B</td>
+            <td>Pittsburgh Pirates</td>
+            <td>1888–1907</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1971</td>
+            <td>Chick Hafey</td>
+            <td>LF</td>
+            <td>St. Louis Cardinals</td>
+            <td>1924–1935</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1937</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1971</td>
+            <td>Harry Hooper</td>
+            <td>RF</td>
+            <td>Boston Red Sox</td>
+            <td>1909–1925</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1971</td>
+            <td>Joe Kelley</td>
+            <td>LF</td>
+            <td>Baltimore Orioles (NL)</td>
+            <td>1891–1906</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1908</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1971</td>
+            <td>Rube Marquard</td>
+            <td>P</td>
+            <td>New York Giants</td>
+            <td>1908–1925</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1971</td>
+            <td>Satchel Paige</td>
+            <td>P</td>
+            <td>Kansas City Monarchs</td>
+            <td>1927–1953</td>
+            <td>NLC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1955</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1965</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1971</td>
+            <td>George Weiss</td>
+            <td>EXEC</td>
+            <td>New York Yankees</td>
+            <td>1947–1966</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1972</td>
+            <td>Yogi Berra</td>
+            <td>C</td>
+            <td>New York Yankees</td>
+            <td>1946–1963</td>
+            <td>BBWAA</td>
+            <td>85.61%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1965</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1972</td>
+            <td>Josh Gibson</td>
+            <td>C</td>
+            <td>Homestead Grays</td>
+            <td>1930–1946</td>
+            <td>NLC</td>
+            <td>100%</td>
+            </tr>
+            <tr>
+            <td align="right">1972</td>
+            <td>Lefty Gomez</td>
+            <td>P</td>
+            <td>New York Yankees</td>
+            <td>1930–1943</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1972</td>
+            <td>Will Harridge</td>
+            <td>EXEC</td>
+            <td>—</td>
+            <td>1909–1925</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1972</td>
+            <td>Sandy Koufax</td>
+            <td>P</td>
+            <td>Los Angeles Dodgers</td>
+            <td>1955–1966</td>
+            <td>BBWAA</td>
+            <td>86.87%</td>
+            </tr>
+            <tr>
+            <td align="right">1972</td>
+            <td>Buck Leonard</td>
+            <td>1B</td>
+            <td>Homestead Grays</td>
+            <td>1933–1950</td>
+            <td>NLC</td>
+            <td>77.78%</td>
+            </tr>
+            <tr>
+            <td align="right">1972</td>
+            <td>Early Wynn</td>
+            <td>P</td>
+            <td>Cleveland Indians</td>
+            <td>1939</td>
+            <td>BBWAA</td>
+            <td>76.01%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1941–1944</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1946–1962</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1972</td>
+            <td>Ross Youngs</td>
+            <td>RF</td>
+            <td>New York Giants</td>
+            <td>1917–1926</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1973</td>
+            <td>Roberto Clemente</td>
+            <td>RF</td>
+            <td>Pittsburgh Pirates</td>
+            <td>1955–1972</td>
+            <td>BBWAA</td>
+            <td>92.69%</td>
+            </tr>
+            <tr>
+            <td align="right">1973</td>
+            <td>Billy Evans</td>
+            <td>UMP</td>
+            <td>—</td>
+            <td>1906–1927</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1973</td>
+            <td>Monte Irvin</td>
+            <td>LF</td>
+            <td>Newark Eagles</td>
+            <td>1937–1942</td>
+            <td>NLC</td>
+            <td>75%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1945–1956</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1973</td>
+            <td>George Kelly</td>
+            <td>1B</td>
+            <td>New York Giants</td>
+            <td>1915–1917</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1919–1930</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1932</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1973</td>
+            <td>Warren Spahn</td>
+            <td>P</td>
+            <td>Milwaukee Braves</td>
+            <td>1942</td>
+            <td>BBWAA</td>
+            <td>82.89%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1946–1965</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1973</td>
+            <td>Mickey Welch</td>
+            <td>P</td>
+            <td>New York Giants</td>
+            <td>1880–1892</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1974</td>
+            <td>Cool Papa Bell</td>
+            <td>CF</td>
+            <td>St. Louis Stars</td>
+            <td>1922–1938</td>
+            <td>NLC</td>
+            <td>100%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1942</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1947–1950</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1974</td>
+            <td>Jim Bottomley</td>
+            <td>1B</td>
+            <td>St. Louis Cardinals</td>
+            <td>1922–1937</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1974</td>
+            <td>Jocko Conlan</td>
+            <td>UMP</td>
+            <td>—</td>
+            <td>1941–1965</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1974</td>
+            <td>Whitey Ford</td>
+            <td>P</td>
+            <td>New York Yankees</td>
+            <td>1950</td>
+            <td>BBWAA</td>
+            <td>77.81%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1953–1967</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1974</td>
+            <td>Mickey Mantle</td>
+            <td>CF</td>
+            <td>New York Yankees</td>
+            <td>1951–1968</td>
+            <td>BBWAA</td>
+            <td>88.22%</td>
+            </tr>
+            <tr>
+            <td align="right">1974</td>
+            <td>Sam Thompson</td>
+            <td>RF</td>
+            <td>Philadelphia Phillies</td>
+            <td>1885–1898</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1908</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1975</td>
+            <td>Earl Averill</td>
+            <td>CF</td>
+            <td>Cleveland Indians</td>
+            <td>1930–1941</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1975</td>
+            <td>Bucky Harris</td>
+            <td>MGR</td>
+            <td>Washington Senators</td>
+            <td>1924–1943</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1947–1948</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1950–1956</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1975</td>
+            <td>Billy Herman</td>
+            <td>2B</td>
+            <td>Chicago Cubs</td>
+            <td>1931–1943</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1946–1947</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1975</td>
+            <td>Judy Johnson</td>
+            <td>3B</td>
+            <td>Hilldale Daisies</td>
+            <td>1918–1937</td>
+            <td>NLC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1975</td>
+            <td>Ralph Kiner</td>
+            <td>LF</td>
+            <td>Pittsburgh Pirates</td>
+            <td>1946–1955</td>
+            <td>BBWAA</td>
+            <td>75.41%</td>
+            </tr>
+            <tr>
+            <td align="right">1976</td>
+            <td>Oscar Charleston</td>
+            <td>CF</td>
+            <td>Pittsburgh Crawfords</td>
+            <td>1915–1950</td>
+            <td>NLC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1954</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1976</td>
+            <td>Roger Connor</td>
+            <td>1B</td>
+            <td>New York Giants</td>
+            <td>1880–1897</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1976</td>
+            <td>Cal Hubbard</td>
+            <td>UMP</td>
+            <td>—</td>
+            <td>1936–1951</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1976</td>
+            <td>Bob Lemon</td>
+            <td>P</td>
+            <td>Cleveland Indians</td>
+            <td>1941–1942, 1946–1958</td>
+            <td>BBWAA</td>
+            <td>78.61%</td>
+            </tr>
+            <tr>
+            <td align="right">1976</td>
+            <td>Freddie Lindstrom</td>
+            <td>3B</td>
+            <td>New York Giants</td>
+            <td>1924–1935</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1976</td>
+            <td>Robin Roberts</td>
+            <td>P</td>
+            <td>Philadelphia Phillies</td>
+            <td>1948–1966</td>
+            <td>BBWAA</td>
+            <td>86.86%</td>
+            </tr>
+            <tr>
+            <td align="right">1977</td>
+            <td>Ernie Banks</td>
+            <td>SS</td>
+            <td>Chicago Cubs</td>
+            <td>1953–1971</td>
+            <td>BBWAA</td>
+            <td>83.81%</td>
+            </tr>
+            <tr>
+            <td align="right">1977</td>
+            <td>Martín Dihigo</td>
+            <td>P</td>
+            <td>Cuban Stars (East)</td>
+            <td>1923–1931</td>
+            <td>NLC</td>
+            <td>87.50%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1935–1936</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1945</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1977</td>
+            <td>Pop Lloyd</td>
+            <td>SS</td>
+            <td>New York Lincoln Giants</td>
+            <td>1906–1932</td>
+            <td>NLC</td>
+            <td>87.50%</td>
+            </tr>
+            <tr>
+            <td align="right">1977</td>
+            <td>Al López</td>
+            <td>MGR</td>
+            <td>Chicago White Sox[c 11]</td>
+            <td>1951–1965</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1968–1969</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1977</td>
+            <td>Amos Rusie</td>
+            <td>P</td>
+            <td>New York Giants</td>
+            <td>1889–1895</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1897–1898</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1901</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1977</td>
+            <td>Joe Sewell</td>
+            <td>SS</td>
+            <td>Cleveland Indians</td>
+            <td>1920–1933</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1978</td>
+            <td>Addie Joss</td>
+            <td>P</td>
+            <td>Cleveland Indians</td>
+            <td>1902–1910</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1978</td>
+            <td>Larry MacPhail</td>
+            <td>EXEC</td>
+            <td>—</td>
+            <td>1933–1942</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1945–1947</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1978</td>
+            <td>Eddie Mathews</td>
+            <td>3B</td>
+            <td>Milwaukee Braves</td>
+            <td>1952–1968</td>
+            <td>BBWAA</td>
+            <td>79.42%</td>
+            </tr>
+            <tr>
+            <td align="right">1979</td>
+            <td>Warren Giles</td>
+            <td>EXEC</td>
+            <td>Cincinnati Reds</td>
+            <td>1937–1951</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1951–1969</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1979</td>
+            <td>Willie Mays</td>
+            <td>CF</td>
+            <td>San Francisco Giants</td>
+            <td>1951–1952</td>
+            <td>BBWAA</td>
+            <td>94.68%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1954–1973</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1979</td>
+            <td>Hack Wilson</td>
+            <td>CF</td>
+            <td>Chicago Cubs</td>
+            <td>1923–1934</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1980</td>
+            <td>Al Kaline</td>
+            <td>RF</td>
+            <td>Detroit Tigers</td>
+            <td>1953–1974</td>
+            <td>BBWAA</td>
+            <td>88.31%</td>
+            </tr>
+            <tr>
+            <td align="right">1980</td>
+            <td>Chuck Klein</td>
+            <td>RF</td>
+            <td>Philadelphia Phillies</td>
+            <td>1928–1944</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1980</td>
+            <td>Duke Snider</td>
+            <td>CF</td>
+            <td>Brooklyn Dodgers</td>
+            <td>1947–1964</td>
+            <td>BBWAA</td>
+            <td>86.49%</td>
+            </tr>
+            <tr>
+            <td align="right">1980</td>
+            <td>Tom Yawkey</td>
+            <td>EXEC</td>
+            <td>Boston Red Sox</td>
+            <td>1933–1976</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1981</td>
+            <td>Rube Foster</td>
+            <td>MGR</td>
+            <td>Chicago American Giants</td>
+            <td>1902–1926</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1981</td>
+            <td>Bob Gibson</td>
+            <td>P</td>
+            <td>St. Louis Cardinals</td>
+            <td>1959–1975</td>
+            <td>BBWAA</td>
+            <td>84.04%</td>
+            </tr>
+            <tr>
+            <td align="right">1981</td>
+            <td>Johnny Mize</td>
+            <td>1B</td>
+            <td>St. Louis Cardinals</td>
+            <td>1936–1942</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1946–1953</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1982</td>
+            <td>Hank Aaron</td>
+            <td>RF</td>
+            <td>Milwaukee Braves[c 12]</td>
+            <td>1954–1976</td>
+            <td>BBWAA</td>
+            <td>97.83%</td>
+            </tr>
+            <tr>
+            <td align="right">1982</td>
+            <td>Happy Chandler</td>
+            <td>EXEC</td>
+            <td>—</td>
+            <td>1945–1951</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1982</td>
+            <td>Travis Jackson</td>
+            <td>SS</td>
+            <td>New York Giants</td>
+            <td>1922–1936</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1982</td>
+            <td>Frank Robinson</td>
+            <td>RF</td>
+            <td>Cincinnati Reds[c 13]</td>
+            <td>1956–1976</td>
+            <td>BBWAA</td>
+            <td>89.16%</td>
+            </tr>
+            <tr>
+            <td align="right">1983</td>
+            <td>Walter Alston</td>
+            <td>MGR</td>
+            <td>Los Angeles Dodgers</td>
+            <td>1954–1976</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1983</td>
+            <td>George Kell</td>
+            <td>3B</td>
+            <td>Detroit Tigers</td>
+            <td>1943–1957</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1983</td>
+            <td>Juan Marichal</td>
+            <td>P</td>
+            <td>San Francisco Giants</td>
+            <td>1960–1975</td>
+            <td>BBWAA</td>
+            <td>83.69%</td>
+            </tr>
+            <tr>
+            <td align="right">1983</td>
+            <td>Brooks Robinson</td>
+            <td>3B</td>
+            <td>Baltimore Orioles</td>
+            <td>1955–1977</td>
+            <td>BBWAA</td>
+            <td>91.98%</td>
+            </tr>
+            <tr>
+            <td align="right">1984</td>
+            <td>Luis Aparicio</td>
+            <td>SS</td>
+            <td>Chicago White Sox</td>
+            <td>1956–1973</td>
+            <td>BBWAA</td>
+            <td>84.62%</td>
+            </tr>
+            <tr>
+            <td align="right">1984</td>
+            <td>Don Drysdale</td>
+            <td>P</td>
+            <td>Los Angeles Dodgers</td>
+            <td>1956–1969</td>
+            <td>BBWAA</td>
+            <td>78.41%</td>
+            </tr>
+            <tr>
+            <td align="right">1984</td>
+            <td>Rick Ferrell</td>
+            <td>C</td>
+            <td>Boston Red Sox</td>
+            <td>1929–1945</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1947</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1984</td>
+            <td>Harmon Killebrew</td>
+            <td>1B</td>
+            <td>Minnesota Twins</td>
+            <td>1954–1975</td>
+            <td>BBWAA</td>
+            <td>83.13%</td>
+            </tr>
+            <tr>
+            <td align="right">1984</td>
+            <td>Pee Wee Reese</td>
+            <td>SS</td>
+            <td>Brooklyn Dodgers</td>
+            <td>1940–1942</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1946–1958</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1985</td>
+            <td>Lou Brock</td>
+            <td>LF</td>
+            <td>St. Louis Cardinals</td>
+            <td>1961–1979</td>
+            <td>BBWAA</td>
+            <td>79.75%</td>
+            </tr>
+            <tr>
+            <td align="right">1985</td>
+            <td>Enos Slaughter</td>
+            <td>RF</td>
+            <td>St. Louis Cardinals</td>
+            <td>1938–1942</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1946–1959</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1985</td>
+            <td>Arky Vaughan</td>
+            <td>SS</td>
+            <td>Pittsburgh Pirates</td>
+            <td>1932–1943</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1947–1948</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1985</td>
+            <td>Hoyt Wilhelm</td>
+            <td>P</td>
+            <td>Chicago White Sox[c 14]</td>
+            <td>1952–1972</td>
+            <td>BBWAA</td>
+            <td>83.80%</td>
+            </tr>
+            <tr>
+            <td align="right">1986</td>
+            <td>Bobby Doerr</td>
+            <td>2B</td>
+            <td>Boston Red Sox</td>
+            <td>1937–1944</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1946–1951</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1986</td>
+            <td>Ernie Lombardi</td>
+            <td>C</td>
+            <td>Cincinnati Reds</td>
+            <td>1931–1947</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1986</td>
+            <td>Willie McCovey</td>
+            <td>1B</td>
+            <td>San Francisco Giants</td>
+            <td>1959–1980</td>
+            <td>BBWAA</td>
+            <td>81.41%</td>
+            </tr>
+            <tr>
+            <td align="right">1987</td>
+            <td>Ray Dandridge</td>
+            <td>3B</td>
+            <td>Newark Eagles</td>
+            <td>1933–1939</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1942</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1944</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1949</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1987</td>
+            <td>Catfish Hunter</td>
+            <td>P</td>
+            <td>Oakland Athletics[c 15]</td>
+            <td>1965–1979</td>
+            <td>BBWAA</td>
+            <td>76.27%</td>
+            </tr>
+            <tr>
+            <td align="right">1987</td>
+            <td>Billy Williams</td>
+            <td>LF</td>
+            <td>Chicago Cubs</td>
+            <td>1959–1976</td>
+            <td>BBWAA</td>
+            <td>85.71%</td>
+            </tr>
+            <tr>
+            <td align="right">1988</td>
+            <td>Willie Stargell</td>
+            <td>LF</td>
+            <td>Pittsburgh Pirates</td>
+            <td>1962–1982</td>
+            <td>BBWAA</td>
+            <td>82.44%</td>
+            </tr>
+            <tr>
+            <td align="right">1989</td>
+            <td>Al Barlick</td>
+            <td>UMP</td>
+            <td>—</td>
+            <td>1940–1943</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1946–1955</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1958–1971</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1989</td>
+            <td>Johnny Bench</td>
+            <td>C</td>
+            <td>Cincinnati Reds</td>
+            <td>1967–1983</td>
+            <td>BBWAA</td>
+            <td>96.42%</td>
+            </tr>
+            <tr>
+            <td align="right">1989</td>
+            <td>Red Schoendienst</td>
+            <td>2B</td>
+            <td>St. Louis Cardinals</td>
+            <td>1945–1963</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1989</td>
+            <td>Carl Yastrzemski</td>
+            <td>LF</td>
+            <td>Boston Red Sox</td>
+            <td>1961–1983</td>
+            <td>BBWAA</td>
+            <td>94.63%</td>
+            </tr>
+            <tr>
+            <td align="right">1990</td>
+            <td>Joe Morgan</td>
+            <td>2B</td>
+            <td>Cincinnati Reds</td>
+            <td>1963–1984</td>
+            <td>BBWAA</td>
+            <td>81.76%</td>
+            </tr>
+            <tr>
+            <td align="right">1990</td>
+            <td>Jim Palmer</td>
+            <td>P</td>
+            <td>Baltimore Orioles</td>
+            <td>1965–1984</td>
+            <td>BBWAA</td>
+            <td>92.57%</td>
+            </tr>
+            <tr>
+            <td align="right">1991</td>
+            <td>Rod Carew</td>
+            <td>1B</td>
+            <td>Minnesota Twins</td>
+            <td>1967–1985</td>
+            <td>BBWAA</td>
+            <td>90.52%</td>
+            </tr>
+            <tr>
+            <td align="right">1991</td>
+            <td>Ferguson Jenkins</td>
+            <td>P</td>
+            <td>Chicago Cubs</td>
+            <td>1965–1983</td>
+            <td>BBWAA</td>
+            <td>75.40%</td>
+            </tr>
+            <tr>
+            <td align="right">1991</td>
+            <td>Tony Lazzeri</td>
+            <td>2B</td>
+            <td>New York Yankees</td>
+            <td>1926–1939</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1991</td>
+            <td>Gaylord Perry</td>
+            <td>P</td>
+            <td>San Francisco Giants</td>
+            <td>1962–1983</td>
+            <td>BBWAA</td>
+            <td>77.20%</td>
+            </tr>
+            <tr>
+            <td align="right">1991</td>
+            <td>Bill Veeck</td>
+            <td>EXEC</td>
+            <td>Chicago White Sox</td>
+            <td>1946–1949</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1951–1953</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1959–1961</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1975–1980</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1992</td>
+            <td>Rollie Fingers</td>
+            <td>P</td>
+            <td>Oakland Athletics</td>
+            <td>1968–1982</td>
+            <td>BBWAA</td>
+            <td>81.16%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1984–1985</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1992</td>
+            <td>Bill McGowan</td>
+            <td>UMP</td>
+            <td>—</td>
+            <td>1925–1954</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1992</td>
+            <td>Hal Newhouser</td>
+            <td>P</td>
+            <td>Detroit Tigers</td>
+            <td>1939–1955</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1992</td>
+            <td>Tom Seaver</td>
+            <td>P</td>
+            <td>New York Mets</td>
+            <td>1967–1986</td>
+            <td>BBWAA</td>
+            <td>98.84%</td>
+            </tr>
+            <tr>
+            <td align="right">1993</td>
+            <td>Reggie Jackson</td>
+            <td>RF</td>
+            <td>Oakland Athletics[c 16]</td>
+            <td>1967–1987</td>
+            <td>BBWAA</td>
+            <td>93.62%</td>
+            </tr>
+            <tr>
+            <td align="right">1994</td>
+            <td>Steve Carlton</td>
+            <td>P</td>
+            <td>Philadelphia Phillies</td>
+            <td>1965–1988</td>
+            <td>BBWAA</td>
+            <td>95.82%</td>
+            </tr>
+            <tr>
+            <td align="right">1994</td>
+            <td>Leo Durocher</td>
+            <td>MGR</td>
+            <td>Brooklyn Dodgers</td>
+            <td>1939–1946</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1948–1955</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1966–1973</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1994</td>
+            <td>Phil Rizzuto</td>
+            <td>SS</td>
+            <td>New York Yankees</td>
+            <td>1941–1942</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1946–1956</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1995</td>
+            <td>Richie Ashburn</td>
+            <td>CF</td>
+            <td>Philadelphia Phillies</td>
+            <td>1948–1962</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1995</td>
+            <td>Leon Day</td>
+            <td>P</td>
+            <td>Newark Eagles</td>
+            <td>1934–1939</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1941–1943</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1946</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1949–1950</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1995</td>
+            <td>William Hulbert</td>
+            <td>EXEC</td>
+            <td>—</td>
+            <td>1876–1882</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1995</td>
+            <td>Mike Schmidt</td>
+            <td>3B</td>
+            <td>Philadelphia Phillies</td>
+            <td>1972–1989</td>
+            <td>BBWAA</td>
+            <td>96.52%</td>
+            </tr>
+            <tr>
+            <td align="right">1995</td>
+            <td>Vic Willis</td>
+            <td>P</td>
+            <td>Boston Braves</td>
+            <td>1898–1910</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1996</td>
+            <td>Jim Bunning</td>
+            <td>P</td>
+            <td>Detroit Tigers[c 17]</td>
+            <td>1955–1971</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1996</td>
+            <td>Bill Foster</td>
+            <td>P</td>
+            <td>Chicago American Giants</td>
+            <td>1923–1938</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1996</td>
+            <td>Ned Hanlon</td>
+            <td>MGR</td>
+            <td>Baltimore Orioles (NL)</td>
+            <td>1889–1890</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1892–1907</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1996</td>
+            <td>Earl Weaver</td>
+            <td>MGR</td>
+            <td>Baltimore Orioles</td>
+            <td>1968–1982</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1985–1986</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1997</td>
+            <td>Nellie Fox</td>
+            <td>2B</td>
+            <td>Chicago White Sox</td>
+            <td>1947–1965</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1997</td>
+            <td>Tommy Lasorda</td>
+            <td>MGR</td>
+            <td>Los Angeles Dodgers</td>
+            <td>1976–1996</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1997</td>
+            <td>Phil Niekro</td>
+            <td>P</td>
+            <td>Atlanta Braves</td>
+            <td>1964–1987</td>
+            <td>BBWAA</td>
+            <td>80.34%</td>
+            </tr>
+            <tr>
+            <td align="right">1997</td>
+            <td>Willie Wells</td>
+            <td>SS</td>
+            <td>St. Louis Stars</td>
+            <td>1923</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1924–1936</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1942</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1944–1948</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1997</td>
+            <td>George Davis</td>
+            <td>SS</td>
+            <td>New York Giants</td>
+            <td>1890–1909</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1998</td>
+            <td>Larry Doby</td>
+            <td>CF</td>
+            <td>Cleveland Indians</td>
+            <td>1942–1943</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1946–1959</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1998</td>
+            <td>Lee MacPhail</td>
+            <td>EXEC</td>
+            <td>—</td>
+            <td>1958–1984</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1998</td>
+            <td>Bullet Rogan</td>
+            <td>P</td>
+            <td>Kansas City Monarchs</td>
+            <td>1917</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1920–1938</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1998</td>
+            <td>Don Sutton</td>
+            <td>P</td>
+            <td>Los Angeles Dodgers</td>
+            <td>1966–1988</td>
+            <td>BBWAA</td>
+            <td>81.61%</td>
+            </tr>
+            <tr>
+            <td align="right">1999</td>
+            <td>George Brett</td>
+            <td>3B</td>
+            <td>Kansas City Royals</td>
+            <td>1973–1993</td>
+            <td>BBWAA</td>
+            <td>98.19%</td>
+            </tr>
+            <tr>
+            <td align="right">1999</td>
+            <td>Orlando Cepeda</td>
+            <td>1B</td>
+            <td>San Francisco Giants</td>
+            <td>1958–1974</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1999</td>
+            <td>Nestor Chylak</td>
+            <td>UMP</td>
+            <td>—</td>
+            <td>1954–1978</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1999</td>
+            <td>Nolan Ryan</td>
+            <td>P</td>
+            <td>California Angels[c 18]</td>
+            <td>1966</td>
+            <td>BBWAA</td>
+            <td>98.79%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1968–1993</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1999</td>
+            <td>Frank Selee</td>
+            <td>MGR</td>
+            <td>Boston Beaneaters</td>
+            <td>1890</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1892–1905</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">1999</td>
+            <td>Joe Williams</td>
+            <td>P</td>
+            <td>New York Lincoln Giants</td>
+            <td>1910–1932</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">1999</td>
+            <td>Robin Yount</td>
+            <td>SS</td>
+            <td>Milwaukee Brewers</td>
+            <td>1974–1993</td>
+            <td>BBWAA</td>
+            <td>77.46%</td>
+            </tr>
+            <tr>
+            <td align="right">2000</td>
+            <td>Sparky Anderson</td>
+            <td>MGR</td>
+            <td>Detroit Tigers[c 19]</td>
+            <td>1970–1995</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">2000</td>
+            <td>Carlton Fisk</td>
+            <td>C</td>
+            <td>Chicago White Sox[c 20]</td>
+            <td>1969</td>
+            <td>BBWAA</td>
+            <td>79.56%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1971–1993</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">2000</td>
+            <td>Bid McPhee</td>
+            <td>2B</td>
+            <td>Cincinnati Red Stockings</td>
+            <td>1882–1899</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">2000</td>
+            <td>Tony Pérez</td>
+            <td>1B</td>
+            <td>Cincinnati Reds</td>
+            <td>1964–1986</td>
+            <td>BBWAA</td>
+            <td>77.15%</td>
+            </tr>
+            <tr>
+            <td align="right">2000</td>
+            <td>Turkey Stearnes</td>
+            <td>CF</td>
+            <td>Detroit Stars</td>
+            <td>1920–1942</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1945</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">2001</td>
+            <td>Bill Mazeroski</td>
+            <td>2B</td>
+            <td>Pittsburgh Pirates</td>
+            <td>1956–1972</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">2001</td>
+            <td>Kirby Puckett</td>
+            <td>CF</td>
+            <td>Minnesota Twins</td>
+            <td>1984–1995</td>
+            <td>BBWAA</td>
+            <td>82.14%</td>
+            </tr>
+            <tr>
+            <td align="right">2001</td>
+            <td>Dave Winfield</td>
+            <td>RF</td>
+            <td>New York Yankees[c 21]</td>
+            <td>1973–1995</td>
+            <td>BBWAA</td>
+            <td>84.47%</td>
+            </tr>
+            <tr>
+            <td align="right">2001</td>
+            <td>Hilton Smith</td>
+            <td>P</td>
+            <td>Kansas City Monarchs</td>
+            <td>1932–1948</td>
+            <td>VC</td>
+            <td>—1</td>
+            </tr>
+            <tr>
+            <td align="right">2002</td>
+            <td>Ozzie Smith</td>
+            <td>SS</td>
+            <td>St. Louis Cardinals</td>
+            <td>1978–1996</td>
+            <td>BBWAA</td>
+            <td>91.74%</td>
+            </tr>
+            <tr>
+            <td align="right">2003</td>
+            <td>Gary Carter</td>
+            <td>C</td>
+            <td>Montreal Expos</td>
+            <td>1974–1992</td>
+            <td>BBWAA</td>
+            <td>78.02%</td>
+            </tr>
+            <tr>
+            <td align="right">2003</td>
+            <td>Eddie Murray</td>
+            <td>1B</td>
+            <td>Baltimore Orioles</td>
+            <td>1977–1997</td>
+            <td>BBWAA</td>
+            <td>85.28%</td>
+            </tr>
+            <tr>
+            <td align="right">2004</td>
+            <td>Dennis Eckersley</td>
+            <td>P</td>
+            <td>Oakland Athletics</td>
+            <td>1975–1998</td>
+            <td>BBWAA</td>
+            <td>83.20%</td>
+            </tr>
+            <tr>
+            <td align="right">2004</td>
+            <td>Paul Molitor</td>
+            <td>3B</td>
+            <td>Milwaukee Brewers</td>
+            <td>1978–1998</td>
+            <td>BBWAA</td>
+            <td>85.18%</td>
+            </tr>
+            <tr>
+            <td align="right">2005</td>
+            <td>Wade Boggs</td>
+            <td>3B</td>
+            <td>Boston Red Sox</td>
+            <td>1982–1999</td>
+            <td>BBWAA</td>
+            <td>91.86%</td>
+            </tr>
+            <tr>
+            <td align="right">2005</td>
+            <td>Ryne Sandberg</td>
+            <td>2B</td>
+            <td>Chicago Cubs</td>
+            <td>1981–1994</td>
+            <td>BBWAA</td>
+            <td>76.16%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1996–1997</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">2006</td>
+            <td>Ray Brown</td>
+            <td>P</td>
+            <td>Homestead Grays</td>
+            <td>1931–1945</td>
+            <td>SCNL</td>
+            <td>—2</td>
+            </tr>
+            <tr>
+            <td align="right">2006</td>
+            <td>Willard Brown</td>
+            <td>CF</td>
+            <td>Kansas City Monarchs</td>
+            <td>1935–1950</td>
+            <td>SCNL</td>
+            <td>—2</td>
+            </tr>
+            <tr>
+            <td align="right">2006</td>
+            <td>Andy Cooper</td>
+            <td>P</td>
+            <td>Kansas City Monarchs</td>
+            <td>1920–1941</td>
+            <td>SCNL</td>
+            <td>—2</td>
+            </tr>
+            <tr>
+            <td align="right">2006</td>
+            <td>Frank Grant</td>
+            <td>2B</td>
+            <td>Cuban Giants</td>
+            <td>1886–1903</td>
+            <td>SCNL</td>
+            <td>—2</td>
+            </tr>
+            <tr>
+            <td align="right">2006</td>
+            <td>Pete Hill</td>
+            <td>CF</td>
+            <td>Chicago American Giants</td>
+            <td>1899–1926</td>
+            <td>SCNL</td>
+            <td>—2</td>
+            </tr>
+            <tr>
+            <td align="right">2006</td>
+            <td>Biz Mackey</td>
+            <td>C</td>
+            <td>Hilldale Giants</td>
+            <td>1920–1947</td>
+            <td>SCNL</td>
+            <td>—2</td>
+            </tr>
+            <tr>
+            <td align="right">2006</td>
+            <td>Effa Manley</td>
+            <td>EXEC</td>
+            <td>Newark Eagles</td>
+            <td>1935–1948</td>
+            <td>SCNL</td>
+            <td>—2</td>
+            </tr>
+            <tr>
+            <td align="right">2006</td>
+            <td>José Méndez</td>
+            <td>P</td>
+            <td>Cuban Stars</td>
+            <td>1908–1926</td>
+            <td>SCNL</td>
+            <td>—2</td>
+            </tr>
+            <tr>
+            <td align="right">2006</td>
+            <td>Alex Pompez</td>
+            <td>EXEC</td>
+            <td>New York Cubans</td>
+            <td>1916–1950</td>
+            <td>SCNL</td>
+            <td>—2</td>
+            </tr>
+            <tr>
+            <td align="right">2006</td>
+            <td>Cum Posey</td>
+            <td>EXEC</td>
+            <td>Homestead Grays</td>
+            <td>1920–1946</td>
+            <td>SCNL</td>
+            <td>—2</td>
+            </tr>
+            <tr>
+            <td align="right">2006</td>
+            <td>Louis Santop</td>
+            <td>C</td>
+            <td>Hilldale Daisies</td>
+            <td>1909–1926</td>
+            <td>SCNL</td>
+            <td>—2</td>
+            </tr>
+            <tr>
+            <td align="right">2006</td>
+            <td>Bruce Sutter</td>
+            <td>P</td>
+            <td>Chicago Cubs[c 22]</td>
+            <td>1976–1988</td>
+            <td>BBWAA</td>
+            <td>76.92%</td>
+            </tr>
+            <tr>
+            <td align="right">2006</td>
+            <td>Mule Suttles</td>
+            <td>1B</td>
+            <td>Newark Eagles</td>
+            <td>1921</td>
+            <td>SCNL</td>
+            <td>—2</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1923–1944</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">2006</td>
+            <td>Ben Taylor</td>
+            <td>1B</td>
+            <td>Indianapolis ABCs</td>
+            <td>1908–1929</td>
+            <td>SCNL</td>
+            <td>—2</td>
+            </tr>
+            <tr>
+            <td align="right">2006</td>
+            <td>Cristóbal Torriente</td>
+            <td>CF</td>
+            <td>Chicago American Giants</td>
+            <td>1913–1928</td>
+            <td>SCNL</td>
+            <td>—2</td>
+            </tr>
+            <tr>
+            <td align="right">2006</td>
+            <td>Sol White</td>
+            <td>EXEC</td>
+            <td>Philadelphia Giants</td>
+            <td>—</td>
+            <td>SCNL</td>
+            <td>—2</td>
+            </tr>
+            <tr>
+            <td align="right">2006</td>
+            <td>J. L. Wilkinson</td>
+            <td>EXEC</td>
+            <td>Kansas City Monarchs</td>
+            <td>1912–1948</td>
+            <td>SCNL</td>
+            <td>—2</td>
+            </tr>
+            <tr>
+            <td align="right">2006</td>
+            <td>Jud Wilson</td>
+            <td>3B</td>
+            <td>Philadelphia Stars</td>
+            <td>1922–1945</td>
+            <td>SCNL</td>
+            <td>—2</td>
+            </tr>
+            <tr>
+            <td align="right">2007</td>
+            <td>Tony Gwynn</td>
+            <td>RF</td>
+            <td>San Diego Padres</td>
+            <td>1982–2001</td>
+            <td>BBWAA</td>
+            <td>97.61%</td>
+            </tr>
+            <tr>
+            <td align="right">2007</td>
+            <td>Cal Ripken Jr.</td>
+            <td>SS</td>
+            <td>Baltimore Orioles</td>
+            <td>1981–2001</td>
+            <td>BBWAA</td>
+            <td>98.53%</td>
+            </tr>
+            <tr>
+            <td align="right">2008</td>
+            <td>Barney Dreyfuss</td>
+            <td>EXEC/PIO</td>
+            <td>Pittsburgh Pirates</td>
+            <td>1899–1932</td>
+            <td>VC</td>
+            <td>83.33%</td>
+            </tr>
+            <tr>
+            <td align="right">2008</td>
+            <td>Rich Gossage</td>
+            <td>P</td>
+            <td>New York Yankees</td>
+            <td>1972–1989</td>
+            <td>BBWAA</td>
+            <td>85.82%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1991–1994</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">2008</td>
+            <td>Bowie Kuhn</td>
+            <td>EXEC</td>
+            <td>—</td>
+            <td>1969–1984</td>
+            <td>VC</td>
+            <td>83.33%</td>
+            </tr>
+            <tr>
+            <td align="right">2008</td>
+            <td>Walter O&#39;Malley</td>
+            <td>EXEC</td>
+            <td>Los Angeles Dodgers</td>
+            <td>1950–1979</td>
+            <td>VC</td>
+            <td>75%</td>
+            </tr>
+            <tr>
+            <td align="right">2008</td>
+            <td>Billy Southworth</td>
+            <td>MGR</td>
+            <td>St. Louis Cardinals</td>
+            <td>1929</td>
+            <td>VC</td>
+            <td>81.25%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1940–1951</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">2008</td>
+            <td>Dick Williams</td>
+            <td>MGR</td>
+            <td>Montreal Expos[c 23]</td>
+            <td>1967–1969</td>
+            <td>VC</td>
+            <td>81.25%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1971–1988</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">2009</td>
+            <td>Joe Gordon</td>
+            <td>2B</td>
+            <td>New York Yankees</td>
+            <td>1938–1950</td>
+            <td>VC</td>
+            <td>83.33%</td>
+            </tr>
+            <tr>
+            <td align="right">2009</td>
+            <td>Rickey Henderson</td>
+            <td>LF</td>
+            <td>Oakland Athletics</td>
+            <td>1979–2003</td>
+            <td>BBWAA</td>
+            <td>94.81%</td>
+            </tr>
+            <tr>
+            <td align="right">2009</td>
+            <td>Jim Rice</td>
+            <td>LF</td>
+            <td>Boston Red Sox</td>
+            <td>1974–1989</td>
+            <td>BBWAA</td>
+            <td>76.44%</td>
+            </tr>
+            <tr>
+            <td align="right">2010</td>
+            <td>Doug Harvey</td>
+            <td>UMP</td>
+            <td>—</td>
+            <td>1962–1992</td>
+            <td>VC</td>
+            <td>93.75%</td>
+            </tr>
+            <tr>
+            <td align="right">2010</td>
+            <td>Whitey Herzog</td>
+            <td>MGR</td>
+            <td>St. Louis Cardinals</td>
+            <td>1973–1990</td>
+            <td>VC</td>
+            <td>87.50%</td>
+            </tr>
+            <tr>
+            <td align="right">2010</td>
+            <td>Andre Dawson</td>
+            <td>RF</td>
+            <td>Montreal Expos</td>
+            <td>1977–1996</td>
+            <td>BBWAA</td>
+            <td>77.90%</td>
+            </tr>
+            <tr>
+            <td align="right">2011</td>
+            <td>Roberto Alomar</td>
+            <td>2B</td>
+            <td>Toronto Blue Jays</td>
+            <td>1988–2004</td>
+            <td>BBWAA</td>
+            <td>90.01%</td>
+            </tr>
+            <tr>
+            <td align="right">2011</td>
+            <td>Bert Blyleven</td>
+            <td>P</td>
+            <td>Minnesota Twins</td>
+            <td>1970–1992</td>
+            <td>BBWAA</td>
+            <td>79.69%</td>
+            </tr>
+            <tr>
+            <td align="right">2011</td>
+            <td>Pat Gillick</td>
+            <td>EXEC</td>
+            <td>Toronto Blue Jays</td>
+            <td>1978–2008</td>
+            <td>VC</td>
+            <td>81.30%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>(EE)</td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">2012</td>
+            <td>Barry Larkin</td>
+            <td>SS</td>
+            <td>Cincinnati Reds</td>
+            <td>1986–2004</td>
+            <td>BBWAA</td>
+            <td>86.39%</td>
+            </tr>
+            <tr>
+            <td align="right">2012</td>
+            <td>Ron Santo</td>
+            <td>3B</td>
+            <td>Chicago Cubs</td>
+            <td>1960–1974</td>
+            <td>VC</td>
+            <td>93.75%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>(GE)</td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">2013</td>
+            <td>Hank O&#39;Day</td>
+            <td>UMP</td>
+            <td>—</td>
+            <td>1895–1927</td>
+            <td>VC</td>
+            <td>93.80%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>(PI)</td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">2013</td>
+            <td>Jacob Ruppert</td>
+            <td>EXEC</td>
+            <td>New York Yankees</td>
+            <td>1915–1938</td>
+            <td>VC</td>
+            <td>93.80%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>(PI)</td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">2013</td>
+            <td>Deacon White</td>
+            <td>3B</td>
+            <td>Buffalo Bisons (NL)</td>
+            <td>1871–1890</td>
+            <td>VC</td>
+            <td>87.50%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>(PI)</td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">2014</td>
+            <td>Bobby Cox</td>
+            <td>MGR</td>
+            <td>Atlanta Braves</td>
+            <td>1978–2010</td>
+            <td>VC</td>
+            <td>100%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>(EE)</td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">2014</td>
+            <td>Tom Glavine</td>
+            <td>P</td>
+            <td>Atlanta Braves</td>
+            <td>1987–2008</td>
+            <td>BBWAA</td>
+            <td>91.94%</td>
+            </tr>
+            <tr>
+            <td align="right">2014</td>
+            <td>Tony La Russa</td>
+            <td>MGR</td>
+            <td>St. Louis Cardinals[c 15]</td>
+            <td>1979–2011</td>
+            <td>VC</td>
+            <td>100%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>2021–present</td>
+            <td>(EE)</td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">2014</td>
+            <td>Greg Maddux</td>
+            <td>P</td>
+            <td>Atlanta Braves[c 15]</td>
+            <td>1986–2008</td>
+            <td>BBWAA</td>
+            <td>97.20%</td>
+            </tr>
+            <tr>
+            <td align="right">2014</td>
+            <td>Frank Thomas</td>
+            <td>1B</td>
+            <td>Chicago White Sox</td>
+            <td>1990–2008</td>
+            <td>BBWAA</td>
+            <td>83.71%</td>
+            </tr>
+            <tr>
+            <td align="right">2014</td>
+            <td>Joe Torre</td>
+            <td>MGR</td>
+            <td>New York Yankees</td>
+            <td>1977–2010</td>
+            <td>VC</td>
+            <td>100%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>(EE)</td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">2015</td>
+            <td>Craig Biggio</td>
+            <td>2B</td>
+            <td>Houston Astros</td>
+            <td>1988–2007</td>
+            <td>BBWAA</td>
+            <td>82.70%</td>
+            </tr>
+            <tr>
+            <td align="right">2015</td>
+            <td>Randy Johnson</td>
+            <td>P</td>
+            <td>Seattle Mariners[c 24]</td>
+            <td>1988–2009</td>
+            <td>BBWAA</td>
+            <td>97.27%</td>
+            </tr>
+            <tr>
+            <td align="right">2015</td>
+            <td>Pedro Martinez</td>
+            <td>P</td>
+            <td>Boston Red Sox</td>
+            <td>1992–2009</td>
+            <td>BBWAA</td>
+            <td>91.07%</td>
+            </tr>
+            <tr>
+            <td align="right">2015</td>
+            <td>John Smoltz</td>
+            <td>P</td>
+            <td>Atlanta Braves</td>
+            <td>1988–2009</td>
+            <td>BBWAA</td>
+            <td>82.88%</td>
+            </tr>
+            <tr>
+            <td align="right">2016</td>
+            <td>Ken Griffey Jr.</td>
+            <td>CF</td>
+            <td>Seattle Mariners</td>
+            <td>1989–2010</td>
+            <td>BBWAA</td>
+            <td>99.32%</td>
+            </tr>
+            <tr>
+            <td align="right">2016</td>
+            <td>Mike Piazza</td>
+            <td>C</td>
+            <td>New York Mets</td>
+            <td>1992–2008</td>
+            <td>BBWAA</td>
+            <td>82.95%</td>
+            </tr>
+            <tr>
+            <td align="right">2017</td>
+            <td>Jeff Bagwell</td>
+            <td>1B</td>
+            <td>Houston Astros</td>
+            <td>1991–2005</td>
+            <td>BBWAA</td>
+            <td>86.20%</td>
+            </tr>
+            <tr>
+            <td align="right">2017</td>
+            <td>Tim Raines</td>
+            <td>LF</td>
+            <td>Montreal Expos</td>
+            <td>1979–2002</td>
+            <td>BBWAA</td>
+            <td>85.97%</td>
+            </tr>
+            <tr>
+            <td align="right">2017</td>
+            <td>Iván Rodríguez</td>
+            <td>C</td>
+            <td>Texas Rangers</td>
+            <td>1991–2011</td>
+            <td>BBWAA</td>
+            <td>76.02%</td>
+            </tr>
+            <tr>
+            <td align="right">2017</td>
+            <td>John Schuerholz</td>
+            <td>EXEC</td>
+            <td>Atlanta Braves</td>
+            <td>1966–present</td>
+            <td>VC</td>
+            <td>100%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>(TG)</td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">2017</td>
+            <td>Bud Selig</td>
+            <td>EXEC</td>
+            <td>—</td>
+            <td>1992–2015</td>
+            <td>VC</td>
+            <td>93.80%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>(TG)</td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">2018</td>
+            <td>Vladimir Guerrero</td>
+            <td>RF</td>
+            <td>Anaheim Angels</td>
+            <td>1996–2011</td>
+            <td>BBWAA</td>
+            <td>92.89%</td>
+            </tr>
+            <tr>
+            <td align="right">2018</td>
+            <td>Trevor Hoffman</td>
+            <td>P</td>
+            <td>San Diego Padres</td>
+            <td>1993–2010</td>
+            <td>BBWAA</td>
+            <td>79.86%</td>
+            </tr>
+            <tr>
+            <td align="right">2018</td>
+            <td>Chipper Jones</td>
+            <td>3B</td>
+            <td>Atlanta Braves</td>
+            <td>1993</td>
+            <td>BBWAA</td>
+            <td>97.16%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>1995–2012</td>
+            <td> </td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">2018</td>
+            <td>Jim Thome</td>
+            <td>1B</td>
+            <td>Cleveland Indians</td>
+            <td>1991–2012</td>
+            <td>BBWAA</td>
+            <td>89.81%</td>
+            </tr>
+            <tr>
+            <td align="right">2018</td>
+            <td>Jack Morris</td>
+            <td>P</td>
+            <td>Detroit Tigers</td>
+            <td>1977–1994</td>
+            <td>VC</td>
+            <td>87.50%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>(MB)</td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">2018</td>
+            <td>Alan Trammell</td>
+            <td>SS</td>
+            <td>Detroit Tigers</td>
+            <td>1977–1996</td>
+            <td>VC</td>
+            <td>81.30%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>(MB)</td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">2019</td>
+            <td>Mariano Rivera</td>
+            <td>P</td>
+            <td>New York Yankees</td>
+            <td>1995–2013</td>
+            <td>BBWAA</td>
+            <td>100%</td>
+            </tr>
+            <tr>
+            <td align="right">2019</td>
+            <td>Roy Halladay</td>
+            <td>P</td>
+            <td>Toronto Blue Jays[c 15]</td>
+            <td>1998–2013</td>
+            <td>BBWAA</td>
+            <td>85.41%</td>
+            </tr>
+            <tr>
+            <td align="right">2019</td>
+            <td>Edgar Martínez</td>
+            <td>DH</td>
+            <td>Seattle Mariners</td>
+            <td>1987–2004</td>
+            <td>BBWAA</td>
+            <td>85.41%</td>
+            </tr>
+            <tr>
+            <td align="right">2019</td>
+            <td>Mike Mussina</td>
+            <td>P</td>
+            <td>Baltimore Orioles[c 15]</td>
+            <td>1991–2008</td>
+            <td>BBWAA</td>
+            <td>76.71%</td>
+            </tr>
+            <tr>
+            <td align="right">2019</td>
+            <td>Harold Baines</td>
+            <td>DH</td>
+            <td>Chicago White Sox</td>
+            <td>1980–2001</td>
+            <td>VC</td>
+            <td>75%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>(TG)</td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">2019</td>
+            <td>Lee Smith</td>
+            <td>P</td>
+            <td>Chicago Cubs</td>
+            <td>1980–1997</td>
+            <td>VC</td>
+            <td>100%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>(TG)</td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">20206</td>
+            <td>Derek Jeter</td>
+            <td>SS</td>
+            <td>New York Yankees</td>
+            <td>1995–2014</td>
+            <td>BBWAA</td>
+            <td>99.75%</td>
+            </tr>
+            <tr>
+            <td align="right">20206</td>
+            <td>Larry Walker</td>
+            <td>RF</td>
+            <td>Colorado Rockies</td>
+            <td>1989–2005</td>
+            <td>BBWAA</td>
+            <td>76.57%</td>
+            </tr>
+            <tr>
+            <td align="right">20206</td>
+            <td>Marvin Miller</td>
+            <td>EXEC</td>
+            <td>—</td>
+            <td>1966–1982</td>
+            <td>VC</td>
+            <td>75%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>(MB)</td>
+            <td> </td>
+            </tr>
+            <tr>
+            <td align="right">20206</td>
+            <td>Ted Simmons</td>
+            <td>C</td>
+            <td>St. Louis Cardinals</td>
+            <td>1968–1988</td>
+            <td>VC</td>
+            <td>81.30%</td>
+            </tr>
+            <tr>
+            <td align="right"></td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>(MB)</td>
+            <td> </td>
+            </tr>
+            </tbody></table>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="../static/js/plot.js"></script>
+
+</body>
+
+</html>
