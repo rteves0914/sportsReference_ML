@@ -1,5 +1,5 @@
 function buildMetadata(sample) {
-    d3.csv("../../Resources/Hall_of_Fame_List.csv").then((data) => {
+    d3.csv("../Resources/Hall_of_Fame_List.csv").then((data) => {
       var metadata = data.metadata;
 
       // Filter the data for the object with the desired sample number
