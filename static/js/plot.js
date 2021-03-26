@@ -1,5 +1,5 @@
 function buildMetadata(sample) {
-    d3.csv("player_data.csv").then((data) => {
+    d3.csv("../../Resources/Hall_of_Fame_List.csv").then((data) => {
       var metadata = data.metadata;
 
       // Filter the data for the object with the desired sample number
@@ -26,7 +26,7 @@ function init() {
     var dropdown = d3.select("#selDataset");
   
     // Use the list of sample names to populate the select options
-    d3.csv("player_data.csv").then((data) => {
+    d3.csv("../../Resources/Hall_of_Fame_List.csv").then((data) => {
       var playerNames = data.name;
   
       playerNames.forEach((sample) => {
