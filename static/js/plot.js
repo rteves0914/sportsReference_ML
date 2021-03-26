@@ -33,21 +33,15 @@ function init() {
       console.log(playerNames)
   
       playerNames.forEach((sample) => {
-        dropdown.append("a")
-                // .classed("dropdown-item")
-                .text(sample);
+        dropdown.append("li")
+                .text(sample)
+                .classed("dropdown-item");
       });
-  
-    //   // Use the first sample from the list to build the initial plots
-    //   var firstSample = sampleNames[0];
-    //   buildCharts(firstSample);
-    //   buildMetadata(firstSample);
     });
   };
   
 function optionChanged(newSample) {
     // Fetch new data each time a new sample is selected
-    buildCharts(newSample);
     buildMetadata(newSample);
   };
   
