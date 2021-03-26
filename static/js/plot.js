@@ -7,10 +7,12 @@ function buildMetadata(sample) {
       var result = resultArray[0];
 
       // Use d3 to select the panel with id of `#sample-metadata`
-      var PANEL = d3.select("#sample-metadata");
+      var namePanel = d3.select("#sample-metadata-name");
+      var statPanel = d3.select("#sample-metadata-stat");
   
       // Use `.html("") to clear any existing metadata
-      PANEL.html("");
+      namePanel.html("");
+      statPanel.html("");
   
       // Use `Object.entries` to add each key and value pair to the panel
       // Hint: Inside the loop, you will need to use d3 to append new
@@ -23,16 +25,17 @@ function buildMetadata(sample) {
 
 function init() {
     // Grab a reference to the dropdown select element
-    var dropdown = d3.select("#selDataset");
+    var dropdown = d3.select(".dropdown-menu");
   
     // Use the list of sample names to populate the select options
-    d3.csv("../../Resources/Hall_of_Fame_List.csv").then((data) => {
-      var playerNames = data.name;
+    d3.csv("../Resources/Hall_of_Fame_List.csv").then((data) => {
+      var playerNames = data.map(item => item.Name)
+      console.log(playerNames)
   
       playerNames.forEach((sample) => {
-        dropdown.append("option")
-                .text(sample)
-                .property("value", sample);
+        dropdown.append("a")
+                // .classed("dropdown-item")
+                .text(sample);
       });
   
     //   // Use the first sample from the list to build the initial plots
