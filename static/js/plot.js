@@ -1,9 +1,10 @@
 function buildMetadata(sample) {
     d3.csv("../Resources/Hall_of_Fame_List.csv").then((data) => {
-      var metadata = data.metadata;
-
+      //console.log(data)
+      console.log(sample);
       // Filter the data for the object with the desired sample number
-      var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
+      var resultArray = data.filter(item => item.Name == sample);
+      console.log(resultArray);
       var result = resultArray[0];
 
       // Use d3 to select the panel with id of `#sample-metadata`
@@ -14,12 +15,12 @@ function buildMetadata(sample) {
       namePanel.html("");
       statPanel.html("");
   
-      // Use `Object.entries` to add each key and value pair to the panel
-      // Hint: Inside the loop, you will need to use d3 to append new
-      // tags for each key-value in the metadata.
-      Object.entries(result).forEach(([key, value]) => {
-        PANEL.append("h6").text(`${key.toUpperCase()}: ${value}`);
-      });
+      // // Use `Object.entries` to add each key and value pair to the panel
+      // // Hint: Inside the loop, you will need to use d3 to append new
+      // // tags for each key-value in the metadata.
+      // Object.entries(result).forEach(([key, value]) => {
+      //   PANEL.append("h6").text(`${key.toUpperCase()}: ${value}`);
+      // });
     });
 }
 
@@ -40,11 +41,11 @@ function init() {
     });
   };
   
-function optionChanged(newSample) {
-    // Fetch new data each time a new sample is selected
-    buildMetadata(newSample);
-  };
+// function optionChanged(newSample) {
+//     // Fetch new data each time a new sample is selected
+//     buildMetadata(newSample);
+//   };
   
-  // Initialize the dashboard
-  init();
-  
+// Initialize the dashboard
+init();
+d3.selectAll("#makeChange").on("click", buildMetadata(this));
