@@ -9,7 +9,6 @@ function init() {
 
     // Create array of objects for each list item
     var array = Object.values(data);
-    console.log(array);
 
     // Obtain the player names from the CSV
     var playerNames = data.map(item => item.name);
@@ -21,7 +20,8 @@ function init() {
               .classed("dropdown-item");
     });
 
-    var firstSample = array[0].name;
+    // Create first instance for web page to display
+    var firstSample = array[1].name;
 
     buildMetadata(firstSample);
   });
@@ -83,17 +83,10 @@ function buildMetadata(player) {
               .text(`Stolen Bases: ${SB}`);
       famePanel.text(hallOfFame);
     });
-}
+} 
 
-
-  
-// function optionChanged(newSample) {
-//     // Fetch new data each time a new sample is selected
-//     buildMetadata(newSample);
-//   };
-  
 // Initialize the dashboard
 init();
 
-// Event listener for changing names on dropdown
-d3.selectAll("#navbarDropdownMenuLink").on("click", buildMetadata(this.value));
+// Event listener to update the player name and stats when a new name is chosen
+d3.select("#makeChange").on("click", buildMetadata(newPlayer));
