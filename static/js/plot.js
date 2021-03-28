@@ -18,6 +18,7 @@ function init() {
       dropdown.append("li")
               .text(sample)
               .classed("dropdown-item");
+              
     });
 
     // Create first instance for web page to display
@@ -60,6 +61,7 @@ function buildMetadata(player) {
       statPanel.html("");
       famePanel.html("");
 
+      // And append the new data that is clicked on
       namePanel.text(`Name: ${name}, Player ID: ${playerID}`);
       statPanel.append("li")
               .text(`At Bat: ${atBats}`)
