@@ -5,10 +5,11 @@ function init() {
   var dropdown = d3.select(".dropdown-menu");
 
   // Use the list of sample names to populate the select options
-  d3.csv("../Resources/player_data.csv").then((data) => {
+  d3.csv("Resources/player_data.csv").then((data) => {
 
     // Create array of objects for each list item
     var array = Object.values(data);
+    console.log(data);
 
     // Obtain the player names from the CSV
     var playerNames = data.map(item => item.name);
@@ -30,7 +31,7 @@ function init() {
 
 function buildMetadata(player) {
 
-    d3.csv("../Resources/player_data.csv").then((data) => {
+    d3.csv("Resources/player_data.csv").then((data) => {
 
       // Filter the data for the object with the desired sample number
       var resultArray = data.filter(item => item.name == player);
