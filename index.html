@@ -22,14 +22,6 @@
 
       <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" style="color: #7a8288" id="navbarDropdownMenuLink" role="button"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Player List
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="makeChange"></div>
-          </a>
-        </li>
-
         <li class="nav-item">
           <a class="nav-link" style="color: #7a8288" href="templates/player_data.html">Player Database</a>
         </li>
@@ -75,6 +67,12 @@
     <div class="row">
       <div class="col-md-12 col-sm-8">
 
+        <div class="panel panel-primary">
+          <h3 class="panel-title"><strong>Player Dropdown:</strong></h3>
+          <div id="sample-metadata-dropdown" class="panel-body"></div>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+      </br>
         <div class="panel panel-primary">
           <h3 class="panel-title"><strong>Player Name:</strong></h3>
           <div id="sample-metadata-name" class="panel-body"></div>

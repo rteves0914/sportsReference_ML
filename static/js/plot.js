@@ -2,28 +2,26 @@
 function init() {
 
   // Use class "dropdown-menu" from index.html and d3 to grab the tag
-  var dropdown = d3.select(".dropdown-menu");
+  var dropdown = d3.select("#selDataset");
 
   // Use the list of sample names to populate the select options
-  d3.csv("Resources/player_data.csv").then((data) => {
+  d3.csv("Resources/player_data_update.csv").then((data) => {
 
     // Create array of objects for each list item
     var array = Object.values(data);
-    console.log(data);
 
     // Obtain the player names from the CSV
     var playerNames = data.map(item => item.name);
 
     // Use forEach to populate the dropdown menu and append li tags to index.html
     playerNames.forEach((sample) => {
-      dropdown.append("li")
+      dropdown.append("option")
               .text(sample)
-              .classed("dropdown-item");
-              
+              .property("value", sample);       
     });
 
     // Create first instance for web page to display
-    var firstSample = array[1].name;
+    var firstSample = array[0].name;
 
     buildMetadata(firstSample);
   });
@@ -31,11 +29,12 @@ function init() {
 
 function buildMetadata(player) {
 
-    d3.csv("Resources/player_data.csv").then((data) => {
+    d3.csv("Resources/player_data_update.csv").then((data) => {
 
       // Filter the data for the object with the desired sample number
       var resultArray = data.filter(item => item.name == player);
       var result = resultArray[0];
+
 
       // Create variable names to hold all the data to be displayed
       var name = result.name;
@@ -88,8 +87,14 @@ function buildMetadata(player) {
     });
 } 
 
+function optionChanged(newSample) {
+  // Fetch new data each time a new sample is selected
+  buildMetadata(newSample);
+}
+
+
 // Initialize the dashboard
 init();
 
-// Event listener to update the player name and stats when a new name is chosen
-d3.select("#makeChange").on("click", buildMetadata(newPlayer));
+// // Event listener to update the player name and stats when a new name is chosen
+// d3.select(".dropdown-item").on("click", buildMetadata(newPlayer));
