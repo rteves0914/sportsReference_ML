@@ -92,9 +92,5 @@ function optionChanged(newSample) {
   buildMetadata(newSample);
 }
 
-
 // Initialize the dashboard
 init();
-
-// // Event listener to update the player name and stats when a new name is chosen
-// d3.select(".dropdown-item").on("click", buildMetadata(newPlayer));
